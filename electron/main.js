@@ -1,6 +1,11 @@
-import("./sentry");
+const Sentry = require("@sentry/electron");
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
+const convert = require("heic-convert");
+Sentry.init({
+  dsn: "",
+});
+
 function createWindow() {
   const win = new BrowserWindow({
     width: 800,
